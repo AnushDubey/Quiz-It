@@ -107,7 +107,7 @@ export async function POST(req: Request, res: Response) {
       );
     } else {
       return NextResponse.json(
-        { error: "An unexpected error occurred." },
+        { error: "An unexpected error occurred 1." },
         {
           status: 500,
         }
@@ -162,7 +162,7 @@ export async function GET(req: Request, res: Response) {
     );
   } catch (error) {
     return NextResponse.json(
-      { error: "An unexpected error occurred." },
+      { error: "An unexpected error occurred 2." },
       {
         status: 500,
       }
