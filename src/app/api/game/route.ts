@@ -40,9 +40,11 @@ export async function POST(req: Request, res: Response) {
         },
       },
     });
-
+    const apiBaseUrl = process.env.NODE_ENV === 'production'
+      ? 'https://quiz-it-anushdubey.vercel.app'
+      : 'http://localhost:3000';
     const { data } = await axios.post(
-      `https://quiz-it-anushdubey.vercel.app/api/questions`,
+      `${apiBaseUrl}/api/questions`,
       {
         amount,
         topic,
