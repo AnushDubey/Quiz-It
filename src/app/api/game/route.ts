@@ -130,7 +130,9 @@ export async function GET(req: Request, res: Response) {
       );
     }
     const url = new URL(req.url);
+    console.log(url);
     const gameId = url.searchParams.get("gameId");
+    console.log(gameId);
     if (!gameId) {
       return NextResponse.json(
         { error: "You must provide a game id." },
