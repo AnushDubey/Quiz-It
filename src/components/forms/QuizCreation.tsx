@@ -73,6 +73,7 @@ const QuizCreation = ({ topic: topicParam }: Props) => {
         }
       },
       onSuccess: ({ gameId }: { gameId: string }) => {
+        console.log("onSuccess run.");
         setFinishedLoading(true);
         setTimeout(() => {
           if (form.getValues("type") === "mcq") {
