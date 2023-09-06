@@ -33,7 +33,7 @@ export default function RootLayout({
       <footer className="text-black text-sm flex-center mt-4 md:mt-0 text-center astro-SZ7XMLTE"> 
       <Link
         className="ml-1 underline"
-        href="https://github.com/AnushDubey/Quiz-It-App"
+        href="https://github.com/AnushDubey/Quiz-It"
       >
         GitHub 
       </Link>

@@ -6,5 +6,10 @@
         "**/.svn": false,
         "**/CVS": false,
         "**/Thumbs.db": false
+    },
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/.next": true,
+        "**/.vscode": true
     }
 }
