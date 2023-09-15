@@ -24,8 +24,8 @@ const Dasboard = async (props: Props) => {
     <main className="p-8 mx-auto max-w-7xl" 
     style={{ backgroundColor: "#fff8f3" }}
     >
-      <div className="flex items-center">
-        <h2 className="mr-2 text-3xl font-bold tracking-tight">Dashboard</h2>
+      <div className="flex-column items-space items-center">
+        <h2 className="mr-2 mb-4 text-3xl font-bold tracking-tight">Hi {session.user.name?.split(' ')[0]}! Accelerate your learning journey with Quiz-It</h2>
         <DetailsDialog />
       </div>
 

@@ -32,7 +32,7 @@ const DetailsDialog = ({}: Props) => {
                 <Github className="w-5 h-5" />
                 <Link
                   className="ml-1 underline"
-                  href="https://github.com/AnushDubey/Quiz-It-App"
+                  href="https://github.com/AnushDubey/Quiz-It"
                 >
                   GitHub
                 </Link>

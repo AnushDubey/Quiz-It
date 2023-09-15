@@ -36,14 +36,21 @@ type Props = {
 
 type Input = z.infer<typeof quizCreationSchema>;
 
+
 const QuizCreation = ({ topic: topicParam }: Props) => {
+//   const eventSource = new EventSource("/api/game"); // Adjust the URL to your SSE endpoint
+
+//   eventSource.onmessage = (event) => {
+//   const data = JSON.parse(event.data);
+//   // Handle the received data here, e.g., update UI or process questions
+// };
   const router = useRouter();
   const [showLoader, setShowLoader] = React.useState(false);
   const [finishedLoading, setFinishedLoading] = React.useState(false);
   const { toast } = useToast();
   const { mutate: getQuestions, isLoading } = useMutation({
     mutationFn: async ({ amount, topic, type }: Input) => {
-      const response = await axios.post("/api/game", { amount, topic, type });
+      const response = await axios.post("/api/game", { amount, topic, type ,stream:true});
       return response.data;
     },
   });
@@ -66,7 +73,7 @@ const QuizCreation = ({ topic: topicParam }: Props) => {
           if (error.response?.status === 500) {
             toast({
               title: "Error",
-              description: "Something went wrong. Please try again later.",
+              description: "Something went wrong. Please t arygain later.",
               variant: "destructive",
             });
           }
